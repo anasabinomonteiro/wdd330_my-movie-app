@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie&Serie Discovery App</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script type="module" src="/src/js/app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo-title">
+        <img src="data/logo/Logo 500x500 px.jpeg" alt="Logo" class="logo" />
+        <h1>Movie & Serie Discovery</h1>
+      </div>
+      <p>
+        The Movie and Series Discovery App is a web application that allows
+        users to search for movies and series, view descriptions, ratings,
+        trailers, and where to watch.
+      </p>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pages/favorites.html">Favorites</a></li>
+          <li><a href="where_watch.html">Where To Watch</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h2>Discover Movies and Series</h2>
+      <p>
+        Search for movies and series, view descriptions, ratings, trailers, and
+        where to watch.
+      </p>
+
+      <section id="search-section">
+        <form id="search-form">
+          <label for="search-input">Search for a movie or series:</label>
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Enter Title"
+            required
+          />
+          <button type="submit" id="search-button">Search</button>
+        </form>
+      </section>
+
+      <section id="filters-section">
+        <form id="filters-form">
+          <!---Filter by genre-->
+          <label for="genre-filter">Genre:</label>
+          <select id="genre-filter" name="genre">
+            <option value="">All</option>
+            <option value="28">Action</option>
+            <option value="12">Adventure</option>
+            <option value="16">Animation</option>
+            <option value="35">Comedy</option>
+            <option value="80">Crime</option>
+            <option value="99">Documentary</option>
+            <option value="18">Drama</option>
+            <option value="10751">Family</option>
+            <option value="14">Fantasy</option>
+            <option value="36">History</option>
+            <option value="27">Horror</option>
+            <option value="10402">Music</option>
+            <option value="9648">Mystery</option>
+            <option value="10749">Romance</option>
+            <option value="878">Science Fiction</option>
+            <option value="10770">TV Movie</option>
+            <option value="53">Thriller</option>
+            <option value="10752">War</option>
+            <option value="37">Western</option>
+          </select>
+
+        <!-- Filter by year-->
+         <label for="year-filter">Year:</label>
+         <input type="number" id="year-filter" name="year" placeholder="2024" min="1900" max="2025" />
+
+        <!-- Order -->
+         <label for="sort-filter">Sort by:</label>
+         <select id="sort-filter" name="sort">
+           <option value="popularity.desc">Popularity Descending</option>
+           <option value="popularity.asc">Popularity Ascending</option>
+           <option value="vote_average.desc">Rating Descending</option>
+           <option value="vote_average.asc">Rating Ascending</option>
+           <option value="release_date.desc">Release Date Descending</option>
+           <option value="release_date.asc">Release Date Ascending</option>
+          </select>
+          <button type="submit" id="filter-button">Apply Filters</button>        
+        </form>
+      </section>
+
+      <section id="results-section">
+        <h2>Titles</h2>
+        <div id="results-container"></div>
+      </section>
+     
+    </main>
+
+    <!-- Modal to show movie details -->
+    <div id="details-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <img id="modal-poster" alt="Poster" />
+        <h3 id="modal-title">Title</h3>
+        <p id="modal-description">Description</p>
+        <p id="modal-rating-tmdb">TMDb Rating:</p>
+        <p id="modal-rating-imdb">IMDb Rating:</p>
+        <p id="modal-where-to-watch">Where to watch</p>
+        <p id="modal-trailer">Trailer</p>
+        <!-- Users comments section -->
+        <div id="user-comments">
+          <h4>User Comments:</h4>
+          <ul id="comments-list"></ul>
+          <textarea
+            id="comment-input"
+            placeholder="Leave your comment..."
+          ></textarea>
+          <button id="submit-comment">Submit your comment</button>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; <span id="currentYear"></span> ♦ WDD330 - Project - Movie&Serie Discovery App ♦</p>
+      <div class="footer-icons">
+        <a href="https://github.com/anasabinomonteiro" target="_blank"><i class="fab fa-github"></i></a>  
+        <a href="https://www.linkedin.com/in/analuciamonteiro" target="_blank"><i class="fab fa-linkedin"></i></a>          
+      </div>
+    </footer>
+  </body>
+</html>

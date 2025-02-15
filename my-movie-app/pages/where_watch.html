@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Where to Watch - Movie&Serie Discovery App</title>
+    <link rel="stylesheet" href="../src/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script type="module" src="../src/js/app.js" defer></script>     
+    <script type="module" src="../src/js/where_watch.js" defer></script>  
+  </head>
+  <body>
+    <header>
+      <div class="logo-title">
+        <img src="../data/logo/Logo 500x500 px.jpeg" alt="Logo" class="logo" />
+        <h1>Movie & Serie Discovery</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pages/favorites.html">Favorites</a></li>
+          <li><a href="where_watch.html">Where To Watch</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div id="where-watch-intro">
+        <h4>Want to find out which platforms your favorite movie is on?</h4>
+        <p>This is the place!!!</p>
+      </div>
+
+        <section id="search-section">
+            <h2>Find Where to Watch</h2>
+            <form id="watch-search-form">
+            <input
+              type="text"
+              id="watch-search-input"
+              placeholder="Enter Movie/Series Title"
+              required
+            />
+            <button type="submit" id="watch-search-button">Search</button>
+          </form>
+        </section>
+
+        <section id="where-watch-section">
+            <h2>Available on:</h2>
+            <div id="where-watch-container"></div>
+        </section>
+    </main>
+
+    <footer>
+      <p>&copy; <span id="currentYear"></span> ♦ WDD330 - Project - Movie&Serie Discovery App ♦</p>
+      <div class="footer-icons">
+        <a href="https://github.com/anasabinomonteiro" target="_blank"><i class="fab fa-github"></i></a>  
+        <a href="https://www.linkedin.com/in/analuciamonteiro" target="_blank"><i class="fab fa-linkedin"></i></a>          
+      </div>
+    </footer>
+    
+  </body>
+</html>

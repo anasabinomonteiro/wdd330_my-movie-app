@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Favorites - Movie&Serie Discovery App</title>
+    <link rel="stylesheet" href="../src/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script type="module" src="../src/js/app.js" defer></script>  
+    <script type="module" src="../src/js/favorites.js" defer></script>    
+  </head>
+  <body>
+    <header>
+      <div class="logo-title">
+        <img src="../data/logo/Logo 500x500 px.jpeg" alt="Logo" class="logo" />
+        <h1>Movie & Serie Discovery</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pages/favorites.html">Favorites</a></li>
+          <li><a href="where_watch.html">Where To Watch</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h2>Your Favorites</h2>
+      <p>Your favorites movies and series:</p>
+
+      <section id="favorites-section">
+        <h2>Your Favorites</h2>
+        <div id="favorites-container">
+          <!-- Update from js here -->
+        </div>
+      </section>
+
+      <section>
+        <h2>Recommendations based on your research</h2>
+        <div id="rec-container" class="recommendations-grid"></div>
+      </section>
+
+      <section id="results-section" style="display:none;">
+        <div id="results-container"></div>
+      </section>
+
+    </main>
+    <footer>
+      <p>&copy; <span id="currentYear"></span> ♦ WDD330 - Project - Movie&Serie Discovery App ♦</p>
+      <div class="footer-icons">
+        <a href="https://github.com/anasabinomonteiro" target="_blank"><i class="fab fa-github"></i></a>  
+        <a href="https://www.linkedin.com/in/analuciamonteiro" target="_blank"><i class="fab fa-linkedin"></i></a>          
+      </div>
+    </footer>
+    
+  </body>
+</html>
