@@ -1,7 +1,7 @@
 const TMDB_API_KEY = '55d6f7a56945cb0906b10816ff8b13d1';
 const OMDB_API_KEY = 'a0bd8ce7';
 const BASE_URL_TMDB = 'https://api.themoviedb.org/3';
-const BASE_URL_OMDB = 'http://www.omdbapi.com';
+const BASE_URL_OMDB = 'https://www.omdbapi.com';
 
 //function to search for movies/series by title
 export async function fetchMovies(query) {
