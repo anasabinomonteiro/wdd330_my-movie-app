@@ -1,8 +1,7 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-    base: '', // Empty for Netlify
+    base: '/wdd330_my-movie-app/', // For Github pages
 });
 
-//If use Github pages
-// base: '/wdd330_my-movie-app/', // Use o nome do repositório
+//     base: '', // Empty for Netlify
