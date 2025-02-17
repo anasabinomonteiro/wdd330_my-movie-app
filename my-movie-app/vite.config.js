@@ -3,6 +3,7 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
     root: 'src/',
+    publicDir: '../public', // folder wdd330_my-movie-app/public
 
     build: {
         outDir: '../dist', // folder wdd330_my-movie-app/dist
