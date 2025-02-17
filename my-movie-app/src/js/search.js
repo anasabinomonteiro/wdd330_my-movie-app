@@ -2,7 +2,6 @@ import { fetchMoviesWithFilters } from './api.js';
 import { displaySearchResults } from './ui.js';
 
 const searchForm = document.getElementById('search-form');
-const filtersForm = document.getElementById('filters-form');
 
 if (searchForm) {
   searchForm.addEventListener('submit', async (event) => {
@@ -20,6 +19,8 @@ if (searchForm) {
 }
 
 // Filter and order
+const filtersForm = document.getElementById('filters-form');
+
 if (filtersForm) {
   filtersForm.addEventListener('submit', async (event) => {
     event.preventDefault();
