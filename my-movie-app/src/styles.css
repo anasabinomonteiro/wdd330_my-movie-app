@@ -557,13 +557,19 @@ footer a:hover {
     #results-container,
     #favorites-container,
     .recommendations-grid {
+        display: grid;
         grid-template-columns: 1fr;
+        gap: 10px;
         padding: 10px;
     }
 
     .result-item,
     .favorite,
     .movie-card {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        gap: 5px;
         padding: 5px;
         text-align: center;
     }
@@ -574,6 +580,15 @@ footer a:hover {
         width: 80%;
         border-radius: 8px;
         height: auto;
+        grid-row: 1;
+        margin: 0 auto;
+    }
+
+    .favorite h3,
+    .favorite p {
+        font-size: 0.8rem;
+        grid-row: auto;
+        margin: 5px 0 0;
     }
 
     #details-section {
@@ -649,6 +664,10 @@ footer a:hover {
     .result-item,
     .favorite,
     .movie-card {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        gap: 5px;
         padding: 10px;
         text-align: center;
     }
@@ -659,6 +678,14 @@ footer a:hover {
         width: 100%;
         border-radius: 8px;
         height: auto;
+        grid-row: 1;
+    }
+
+    .favorite h3, 
+    .favorite p {
+        font-size: 0.9rem;
+        grid-row: auto;
+        margin: 0;
     }
 
     /* modal */

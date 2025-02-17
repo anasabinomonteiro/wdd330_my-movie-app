@@ -35,7 +35,7 @@ export function displaySearchResults(movies) {
     document.querySelectorAll('.favorite-button').forEach(button => {
         button.addEventListener('click', (event) => {
             const movieId = event.target.getAttribute('data-id');
-                        
+
             if (!movieId) {
                 console.error('Error, movieId is null or undefined!');
                 return;
@@ -57,7 +57,7 @@ export function displaySearchResults(movies) {
                 setTimeout(() => {
                     message.remove();
                 }, 3000);
-                
+
             } else {
                 console.error(`Error, movie data not found! ${movieId}`);
             }
@@ -92,3 +92,6 @@ export async function displayRecommendations() {
         });
     }
 }
+
+// Run displayRecommendations() when the page loads
+document.addEventListener('DOMContentLoaded', displayRecommendations);

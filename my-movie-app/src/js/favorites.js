@@ -57,9 +57,20 @@ export function displayFavorites() {
     });
 
     // Add event listener to remove buttons
+    addRemoveListeners();
+    // document.querySelectorAll('.remove-button').forEach(button => {
+    //     button.addEventListener('click', (event) => {
+    //         const movieId = parseInt(event.target.getAttribute('data-id'));
+    //         removeFavorite(movieId);
+    //     });
+    // });
+}
+
+// Add event listener to remove buttons
+function addRemoveListeners() {
     document.querySelectorAll('.remove-button').forEach(button => {
         button.addEventListener('click', (event) => {
-            const movieId = parseInt(event.target.getAttribute('data-id'));
+            const movieId = parseInt(event.target.getAttribute('data-id'), 10);
             removeFavorite(movieId);
         });
     });

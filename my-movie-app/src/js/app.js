@@ -1,4 +1,3 @@
-// Import modules and configure events
 import './search.js';
 import './details.js';
 import './favorites.js';
@@ -16,9 +15,9 @@ document.addEventListener('DOMContentLoaded', async () => {
             // Display recommendations based on the search history
             displayRecommendations();
         } catch (error) {
-        console.error('Error to search popular movies:', error);
+            console.error('Error to search popular movies:', error);
+        }
     }
-  }
 })
 
 function updateCurrentYear() {

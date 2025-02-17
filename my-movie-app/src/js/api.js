@@ -102,7 +102,7 @@ export async function fetchWhereToWatch(movieId) {
 
 // Function to search for movies with filters
 export async function fetchMoviesWithFilters(query, genre, year, sort) {
-    let url = `${BASE_URL_TMDB}/discover/movie?api_key=${TMDB_API_KEY}&query=${encodeURIComponent(query)}`;
+    let url = `${BASE_URL_TMDB}/search/movie?api_key=${TMDB_API_KEY}&query=${encodeURIComponent(query)}`;
 
     // Add filters to the URL
     if (genre) url += `&with_genres=${genre}`;
