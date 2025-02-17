@@ -67,5 +67,5 @@ export function displayFavorites() {
 
 // Run if the favorites page is loaded
 if (window.location.pathname.includes('favorites.html')) {
-    document.addEventListener('load', displayFavorites);
+    document.addEventListener('DOMContentLoaded', displayFavorites);
 }
