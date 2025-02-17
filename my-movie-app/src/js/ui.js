@@ -46,7 +46,7 @@ export function displaySearchResults(movies) {
 
             if (movieData) {
                 addFavorite(movieData);
-                console.log(`Movie added to favorites : ${movieData.title}`);
+                console.log(`Movie added to favorites : ${movieData.title}`);          
 
                 const message = document.createElement('div');
                 message.textContent = `${movieData.title} added to favorites!`;

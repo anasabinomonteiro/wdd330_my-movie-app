@@ -58,12 +58,6 @@ export function displayFavorites() {
 
     // Add event listener to remove buttons
     addRemoveListeners();
-    // document.querySelectorAll('.remove-button').forEach(button => {
-    //     button.addEventListener('click', (event) => {
-    //         const movieId = parseInt(event.target.getAttribute('data-id'));
-    //         removeFavorite(movieId);
-    //     });
-    // });
 }
 
 // Add event listener to remove buttons
@@ -77,6 +71,11 @@ function addRemoveListeners() {
 }
 
 // Run if the favorites page is loaded
-if (window.location.pathname.includes('favorites.html')) {
-    document.addEventListener('DOMContentLoaded', displayFavorites);
-}
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('Favorites in page loading....');
+        displayFavorites();
+    });
+
+// if (window.location.pathname.includes('favorites.html')) {
+//     document.addEventListener('DOMContentLoaded', displayFavorites);
+// }
