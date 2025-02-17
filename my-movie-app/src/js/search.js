@@ -1,4 +1,4 @@
-import { fetchMoviesWithFilters } from './api.js';
+import { fetchMoviesByTitle, fetchMoviesWithFilters } from './api.js';
 import { displaySearchResults } from './ui.js';
 
 const searchForm = document.getElementById('search-form');
@@ -13,7 +13,7 @@ if (searchForm) {
     const query = searchInput.value.trim();
     if (!query) return;
 
-    const movies = await fetchMoviesWithFilters(query);
+    const movies = await fetchMoviesByTitle(query);
     displaySearchResults(movies);
   });
 }
@@ -26,7 +26,7 @@ if (filtersForm) {
     event.preventDefault();
 
     const searchInput = document.getElementById('search-input');
-    const query = searchInput.value.trim();
+    const query = searchInput.value.trim() || 'popular';
     const genre = document.getElementById('genre-filter').value;
     const year = document.getElementById('year-filter').value;
     const sort = document.getElementById('sort-filter').value;
