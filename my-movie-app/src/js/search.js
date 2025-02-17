@@ -2,6 +2,8 @@ import { fetchMoviesWithFilters } from './api.js';
 import { displaySearchResults } from './ui.js';
 
 const searchForm = document.getElementById('search-form');
+const filtersForm = document.getElementById('filters-form');
+
 if (searchForm) {
   searchForm.addEventListener('submit', async (event) => {
     event.preventDefault();
@@ -18,21 +20,15 @@ if (searchForm) {
 }
 
 // Filter and order
-const filtersForm = document.getElementById('filters-form');
 if (filtersForm) {
   filtersForm.addEventListener('submit', async (event) => {
     event.preventDefault();
 
     const searchInput = document.getElementById('search-input');
-    const query = searchInput ? searchInput.value.trim() : '';
-
-    const genreFilter = document.getElementById('genre-filter')
-    const yearFilter = document.getElementById('year-filter')
-    const sortFilter = document.getElementById('sort-filter')
-
-    const genre = genreFilter ? genreFilter.value : '';
-    const year = yearFilter ? yearFilter.value : '';
-    const sort = sortFilter ? sortFilter.value : '';
+    const query = searchInput.value.trim();
+    const genre = document.getElementById('genre-filter').value;
+    const year = document.getElementById('year-filter').value;
+    const sort = document.getElementById('sort-filter').value;
 
     const movies = await fetchMoviesWithFilters(query, genre, year, sort);
     displaySearchResults(movies);

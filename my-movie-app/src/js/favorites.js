@@ -70,12 +70,11 @@ function addRemoveListeners() {
     });
 }
 
-// Run if the favorites page is loaded
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('Favorites in page loading....');
-        displayFavorites();
-    });
+// // Run if the favorites page is loaded
+// document.addEventListener('DOMContentLoaded', () => {
+//     console.log('Favorites in page loading....');
+//         displayFavorites();
+//     });
 
 // if (window.location.pathname.includes('favorites.html')) {
-//     document.addEventListener('DOMContentLoaded', displayFavorites);
-// }
+    document.addEventListener('DOMContentLoaded', displayFavorites);
